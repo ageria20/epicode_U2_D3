@@ -30,8 +30,13 @@ ul {
 
 #navBar ul {
   list-style: none;
+  display: flex;
+  flex-direction: column;
 }
 
+.center-btn {
+  order: -1;
+}
 .nav-btn {
   border: none;
   background-color: #ffdf7f;
@@ -63,23 +68,29 @@ main {
 #cardsCont {
   display: flex;
   justify-content: space-evenly;
+  column-gap: 20px;
+  align-items: center;
   height: 50vh;
 }
 
 .cards {
-  max-width: 25%;
-
+  width: 270px;
   height: 80%;
   background-color: #fef7e2;
-  border-radius: 5rem;
+  border-radius: 2rem;
 }
 
-.card-btn {
+.cards button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-inline: auto;
+  margin-top: auto;
   border: none;
   background-color: #ffdf7f;
-  width: 10vw;
-  height: 10vh;
-  border-radius: 5rem;
+  width: 13vw;
+  min-height: 5vh;
+  border-radius: 2rem;
   font-size: 1rem;
   font-weight: 700;
   text-align: center;
@@ -88,18 +99,30 @@ main {
 
 .cards img {
   width: 100%;
-  border-top-left-radius: 5rem;
-  border-top-right-radius: 5rem;
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+}
+
+.description p {
+  margin-top: 0;
 }
 
 .cards h2 {
-  font-size: 1.3rem;
+  margin-bottom: 0;
+  font-size: 1rem;
   font-weight: 700;
+}
+
+.description span {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 500;
 }
 
 .description {
   display: flex;
-  padding-left: 1rem;
+  align-items: center;
+  padding-inline: 1rem;
   column-gap: 65px;
   border-radius: 5rem;
   background-color: #fef7e2;
@@ -153,7 +176,11 @@ main {
   #navBar ul {
     list-style: none;
     display: flex;
-    order: 3;
+    flex-direction: row;
+  }
+
+  .center-btn {
+    order: 0;
   }
 
   .nav-btn {
@@ -194,7 +221,6 @@ main {
     max-width: 25%;
     display: flex;
     flex-wrap: wrap;
-    height: 80%;
     background-color: #fef7e2;
     border-radius: 5rem;
   }
@@ -233,6 +259,9 @@ main {
   }
 
   #news {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
     padding: 1rem;
     width: 100%;
   }
@@ -242,7 +271,8 @@ main {
   }
 
   #description {
-    display: block;
+    display: flex;
+    flex-direction: column;
     text-align: center;
     padding: 2rem;
     border-radius: 2rem;
@@ -254,5 +284,6 @@ main {
     text-align: center;
     width: 100%;
     padding: 1rem;
+    order: -1;
   }
 }
