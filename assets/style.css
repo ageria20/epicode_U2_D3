@@ -8,19 +8,17 @@ body {
   margin: 0;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
+.container {
+  display: flex;
+}
 
 ul {
   margin: 0;
   padding: 0;
 }
 
-.container {
-  display: flex;
-}
-
 #navBar {
   width: 20vw;
-  height: 100%;
   background-color: #fef7e2;
   display: flex;
   flex-direction: column;
@@ -54,7 +52,6 @@ ul {
 
 .nav-btn > img {
   width: 3rem;
-  margin-right: 2rem;
 }
 
 .nav-btn > span {
@@ -70,11 +67,10 @@ main {
   justify-content: space-evenly;
   column-gap: 20px;
   align-items: center;
-  height: 50vh;
 }
 
 .cards {
-  width: 270px;
+  width: 200px;
   height: 80%;
   background-color: #fef7e2;
   border-radius: 2rem;
@@ -86,10 +82,12 @@ main {
   align-items: center;
   margin-inline: auto;
   margin-top: auto;
+  margin-bottom: 1rem;
+  padding: 1rem;
   border: none;
   background-color: #ffdf7f;
   width: 13vw;
-  min-height: 5vh;
+
   border-radius: 2rem;
   font-size: 1rem;
   font-weight: 700;
@@ -121,8 +119,9 @@ main {
 
 .description {
   display: flex;
+  justify-content: space-evenly;
   align-items: center;
-  padding-inline: 1rem;
+  padding: 1rem;
   column-gap: 65px;
   border-radius: 5rem;
   background-color: #fef7e2;
@@ -154,83 +153,82 @@ main {
 
 @media screen and (min-width: 767px) and (max-width: 1023px) {
   .container {
-    display: block;
-  }
-  header {
     display: flex;
-
-    align-items: center;
-    background-color: #fef7e2;
-    width: 100%;
-    padding: 4rem;
+    flex-direction: column;
   }
 
   #navBar {
     width: 100%;
     height: 20vh;
-    display: flex;
-
-    align-items: center;
+    border-radius: 3rem;
   }
 
   #navBar ul {
     list-style: none;
     display: flex;
     flex-direction: row;
-  }
-
-  .center-btn {
-    order: 0;
+    align-items: center;
+    column-gap: 10px;
   }
 
   .nav-btn {
     border: none;
     background-color: #ffdf7f;
-    width: 20vw;
-    height: 12vh;
+    width: 10vw;
+    height: 6vh;
     margin-top: 1.5rem;
     border-radius: 4rem;
-    font-size: 1rem;
+    font-size: 0.7rem;
     font-weight: 700;
-
     color: #762406;
     justify-content: center;
     align-items: center;
   }
 
+  .center-btn {
+    order: 0;
+    width: 16vw;
+    height: 10vh;
+  }
+
   .nav-btn > img {
     width: 3rem;
-    margin-right: 2rem;
   }
 
   .nav-btn > span {
-    font-size: 2.5rem;
+    font-size: 1.5rem;
   }
 
   main {
+    display: flex;
+    flex-direction: column;
     padding-inline: 1.5rem;
   }
 
   #cardsCont {
     display: flex;
-    justify-content: space-evenly;
-    height: 50vh;
+    flex-wrap: wrap;
+    gap: 40px;
   }
 
   .cards {
-    max-width: 25%;
+    width: 336px;
+    height: 80%;
+    background-color: #fef7e2;
+    border-radius: 2rem;
     display: flex;
     flex-wrap: wrap;
     background-color: #fef7e2;
-    border-radius: 5rem;
+    border-radius: 2rem;
   }
 
-  .cards > button {
+  .cards button {
     border: none;
     background-color: #ffdf7f;
-    width: 10vw;
-    height: 10vh;
-    border-radius: 5rem;
+    width: 27vw;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border-radius: 2rem;
     font-size: 1rem;
     font-weight: 700;
     text-align: center;
@@ -239,14 +237,19 @@ main {
 
   .cards img {
     width: 100vw;
-    height: 20vh;
-    border-top-left-radius: 5rem;
-    border-top-right-radius: 5rem;
+    height: 27vh;
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+    object-fit: cover;
   }
 
   .cards h2 {
     font-size: 1.3rem;
     font-weight: 700;
+  }
+
+  .last-card {
+    display: none;
   }
 
   .description {
